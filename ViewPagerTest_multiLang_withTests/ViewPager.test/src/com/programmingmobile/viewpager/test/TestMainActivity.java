@@ -5,7 +5,6 @@ package com.programmingmobile.viewpager.test;
 import static com.google.android.apps.common.testing.ui.espresso.Espresso.onView;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.typeText;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.swipeLeft;
-import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.swipeRight;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.click;
 import static com.google.android.apps.common.testing.ui.espresso.action.ViewActions.closeSoftKeyboard;
 import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.matches;
@@ -21,11 +20,7 @@ import com.cortado.viewpager.MainActivity;
 /**
  *  @author andre.boddenberg@gmx.de
  *  
- *  @version 1.0
- *  
- *  @date 03/30/2014
- *  
- *  <b>Class to test the PageViewer.apk</b><br><br> 
+ *  <b>Class to test the PageViewer.apk</b><br<br> 
  * 
  *  This class offers four methods to test the visibility of the input fields "Username", "Password" and 
  *  the "send" button. All methods are testing the "Send" button functionality as well as its feedback depending
@@ -59,10 +54,10 @@ public class TestMainActivity extends ActivityInstrumentationTestCase2<MainActiv
 	private final String testStrPw   = DOT+DOT+DOT+DOT+DOT+"!";				
 	
 	//DIALOG MESSAGES
-	private final int UserAndPwDialog   = R.string.UserAndPwDialog;	//R.string.UserAndPwDialog;
-	private final int onlyUserDialog    = R.string.onlyUserDialog;
-	private final int onlyPwDialog      = R.string.onlyPwDialog;
-	private final int nothingDialog 	= R.string.nothingDialog;
+	private final String UserAndPwDialog   = com.cortado.viewpager.LogInPage.getUserAndPwDialog();
+	private final String onlyUserDialog    = com.cortado.viewpager.LogInPage.getOnlyUserDialog();
+	private final String onlyPwDialog      = com.cortado.viewpager.LogInPage.getOnlyPwDialog();
+	private final String nothingDialog 	   = com.cortado.viewpager.LogInPage.getNothingDialog();
 	
 	// HumanReadability and Delays
 	private final boolean humanReadability = false;
